@@ -7,9 +7,9 @@ config()
 
 const app = fastify()
 
-app.register(cors, { origin: process.env.CLIENT_URL })
+app.register(cors, { origin: 'http://localhost:3000' })
 app.register(userRoutes)
 
 app.listen({
-  port: +process.env.PORT!
+  port: 3500
 })
